@@ -1,0 +1,6 @@
+{
+  "name": "DP KORPRI Kabupaten Semarang",
+  "description": "Website Resmi Dewan Pengurus KORPRI Kabupaten Semarang - Informasi, kegiatan, agenda, susunan pengurus, dan layanan ASN Kabupaten Semarang.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
