@@ -28,7 +28,7 @@ export interface Official {
   name: string;
   titleSuffix?: string;
   role: string; // e.g. "Ketua", "Wakil Ketua I", "Koordinator"
-  category: 'penasihat' | 'pembina' | 'harian' | 'bidang';
+  category: 'harian' | 'bidang';
   division?: string; // e.g. "Bidang Organisasi dan Kelembagaan"
   agency?: string; // Jabatan Kedinasan, e.g. "Asisten Pemerintahan dan Kesra Sekda"
   order: number;

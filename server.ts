@@ -148,36 +148,6 @@ const defaultDbData = {
   },
   officials: [
     {
-      id: 'off-1',
-      name: 'H. Ngesti Nugraha, S.H., M.H.',
-      titleSuffix: '',
-      role: 'Pembina Utama',
-      category: 'pembina',
-      agency: 'Bupati Semarang',
-      order: 1,
-      photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
-    },
-    {
-      id: 'off-2',
-      name: 'Dra. Hj. Nur Arifah',
-      titleSuffix: '',
-      role: 'Wakil Pembina',
-      category: 'pembina',
-      agency: 'Wakil Bupati Semarang',
-      order: 2,
-      photoUrl: '/src/assets/images/kegiatan_penyerahan_taliasih_1793023008002.jpg',
-    },
-    {
-      id: 'off-3',
-      name: 'Drs. H. Djarot Supriyoto, M.M.',
-      titleSuffix: '',
-      role: 'Ketua Dewan Penasihat',
-      category: 'penasihat',
-      agency: 'Sekretaris Daerah Kabupaten Semarang',
-      order: 3,
-      photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
-    },
-    {
       id: 'off-4',
       name: 'Drs. H. Djarot Supriyoto, M.M.',
       titleSuffix: '',
@@ -185,7 +155,7 @@ const defaultDbData = {
       category: 'harian',
       division: 'Pengurus Harian',
       agency: 'Ketua DP KORPRI Kab. Semarang / Asisten I Setda',
-      order: 4,
+      order: 1,
       photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
     },
     {
@@ -196,7 +166,7 @@ const defaultDbData = {
       category: 'harian',
       division: 'Bidang Organisasi, Kelembagaan & Disiplin',
       agency: 'Kepala BKPSDM Kabupaten Semarang',
-      order: 5,
+      order: 2,
       photoUrl: '/src/assets/images/kegiatan_penyerahan_taliasih_1793023008002.jpg',
     },
     {
@@ -207,7 +177,7 @@ const defaultDbData = {
       category: 'harian',
       division: 'Bidang Usaha, Kesejahteraan & Pengabdian',
       agency: 'Kepala Dinas Pertanian, Perikanan dan Pangan',
-      order: 6,
+      order: 3,
       photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
     },
     {
@@ -218,7 +188,7 @@ const defaultDbData = {
       category: 'harian',
       division: 'Sekretariat DP KORPRI',
       agency: 'Sekretaris BKPSDM Kabupaten Semarang',
-      order: 7,
+      order: 4,
       photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
     },
     {
@@ -229,7 +199,7 @@ const defaultDbData = {
       category: 'harian',
       division: 'Sekretariat DP KORPRI',
       agency: 'Kepala Bagian Organisasi Setda Kab. Semarang',
-      order: 8,
+      order: 5,
       photoUrl: '/src/assets/images/kegiatan_penyerahan_taliasih_1793023008002.jpg',
     },
     {
@@ -240,7 +210,7 @@ const defaultDbData = {
       category: 'harian',
       division: 'Pengelolaan Keuangan & Iuran',
       agency: 'Kepala BKD Kabupaten Semarang',
-      order: 9,
+      order: 6,
       photoUrl: '/src/assets/images/kegiatan_penyerahan_taliasih_1793023008002.jpg',
     },
     {
@@ -251,7 +221,7 @@ const defaultDbData = {
       category: 'bidang',
       division: 'Bidang Organisasi dan Kelembagaan',
       agency: 'Inspektorat Kabupaten Semarang',
-      order: 10,
+      order: 7,
       photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
     },
     {
@@ -262,7 +232,7 @@ const defaultDbData = {
       category: 'bidang',
       division: 'Bidang Pembinaan Jiwa Korps dan Disiplin',
       agency: 'Satpol PP dan Damkar Kabupaten Semarang',
-      order: 11,
+      order: 8,
       photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
     },
     {
@@ -273,7 +243,7 @@ const defaultDbData = {
       category: 'bidang',
       division: 'Bidang Usaha dan Kesejahteraan',
       agency: 'Dinas Koperasi, UMKM, Perindag',
-      order: 12,
+      order: 9,
       photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
     },
     {
@@ -284,7 +254,7 @@ const defaultDbData = {
       category: 'bidang',
       division: 'Bidang Rohani, Olahraga, dan Seni Budaya',
       agency: 'Dinas Pendidikan, Kebudayaan, Kepemudaan dan Olahraga',
-      order: 13,
+      order: 10,
       photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
     },
     {
@@ -295,7 +265,7 @@ const defaultDbData = {
       category: 'bidang',
       division: 'Bidang Bantuan Hukum dan HAM',
       agency: 'Bagian Hukum Setda Kabupaten Semarang',
-      order: 14,
+      order: 11,
       photoUrl: '/src/assets/images/ketua_dp_korpri_1793023021428.jpg',
     },
   ],

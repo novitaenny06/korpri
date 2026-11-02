@@ -1796,7 +1796,6 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
                     onChange={(e) => setEditingOfficial({ ...editingOfficial, category: e.target.value as any })}
                     className="w-full text-xs px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-900"
                   >
-                    <option value="pembina">Pembina / Penasihat</option>
                     <option value="harian">Pengurus Harian</option>
                     <option value="bidang">Bidang-Bidang</option>
                   </select>

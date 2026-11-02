@@ -28,7 +28,6 @@ export const OfficialsPage: React.FC<OfficialsPageProps> = ({ officials }) => {
   const filteredOfficials = sorted.filter((off) => {
     const matchCategory =
       selectedCategory === 'all' ||
-      (selectedCategory === 'pembina' && (off.category === 'pembina' || off.category === 'penasihat')) ||
       (selectedCategory === 'harian' && off.category === 'harian') ||
       (selectedCategory === 'bidang' && off.category === 'bidang');
 
@@ -41,8 +40,7 @@ export const OfficialsPage: React.FC<OfficialsPageProps> = ({ officials }) => {
     return matchCategory && matchSearch;
   });
 
-  // Groups for hierarchical chart view
-  const pembinaList = sorted.filter((o) => o.category === 'pembina' || o.category === 'penasihat');
+  // Groups for hierarchical chart view: Ketua -> Pengurus Harian -> Bidang-Bidang
   const ketua = sorted.find((o) => o.role.toLowerCase().includes('ketua dp korpri') || o.role === 'Ketua');
   const wakilKetuaList = sorted.filter((o) => o.category === 'harian' && o.role.toLowerCase().includes('wakil ketua'));
   const sekretarisList = sorted.filter((o) => o.category === 'harian' && o.role.toLowerCase().includes('sekretaris'));
@@ -108,7 +106,6 @@ export const OfficialsPage: React.FC<OfficialsPageProps> = ({ officials }) => {
                   className="text-xs bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-slate-700 focus:outline-hidden focus:border-[#0b2d4c]"
                 >
                   <option value="all">Semua Tingkat</option>
-                  <option value="pembina">Pembina & Penasihat</option>
                   <option value="harian">Pengurus Harian</option>
                   <option value="bidang">Bidang-Bidang</option>
                 </select>
@@ -141,49 +138,7 @@ export const OfficialsPage: React.FC<OfficialsPageProps> = ({ officials }) => {
               </h2>
             </div>
 
-            {/* LEVEL 1: Dewan Penasihat & Pembina */}
-            <div>
-              <div className="text-center mb-4">
-                <span className="inline-block text-[11px] font-bold text-amber-900 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                  Dewan Penasihat & Pembina
-                </span>
-              </div>
-              <div className="flex flex-wrap justify-center gap-6">
-                {pembinaList.map((item) => (
-                  <div
-                    key={item.id}
-                    className="w-64 bg-slate-50 border border-slate-200 rounded-xl p-4 text-center shadow-xs"
-                  >
-                    <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-3 border-2 border-amber-300">
-                      <img
-                        src={item.photoUrl || '/src/assets/images/ketua_dp_korpri_1793023021428.jpg'}
-                        alt={item.name}
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="text-xs font-bold text-[#0b2d4c] uppercase tracking-tight">
-                      {item.role}
-                    </div>
-                    <div className="text-xs font-semibold text-slate-900 mt-1 leading-snug">
-                      {item.name}
-                    </div>
-                    {item.agency && (
-                      <div className="text-[11px] text-slate-500 mt-1 italic">
-                        {item.agency}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Connecting Vertical Line */}
-            <div className="flex justify-center">
-              <div className="w-0.5 h-8 bg-slate-300"></div>
-            </div>
-
-            {/* LEVEL 2: Ketua DP KORPRI */}
+            {/* LEVEL 1: Ketua DP KORPRI (Pimpinan Utama) */}
             {ketua && (
               <div>
                 <div className="flex justify-center">
@@ -220,7 +175,7 @@ export const OfficialsPage: React.FC<OfficialsPageProps> = ({ officials }) => {
               <div className="w-0.5 h-8 bg-slate-300"></div>
             </div>
 
-            {/* LEVEL 3: Pengurus Harian (Wakil Ketua, Sekretaris, Bendahara) */}
+            {/* LEVEL 2: Pengurus Harian (Wakil Ketua, Sekretaris, Bendahara) */}
             <div>
               <div className="text-center mb-4">
                 <span className="inline-block text-[11px] font-bold text-[#0b2d4c] bg-blue-50 border border-blue-200 px-3 py-1 rounded-full uppercase tracking-wider">
@@ -262,7 +217,7 @@ export const OfficialsPage: React.FC<OfficialsPageProps> = ({ officials }) => {
               <div className="w-0.5 h-8 bg-slate-300"></div>
             </div>
 
-            {/* LEVEL 4: Bidang-Bidang */}
+            {/* LEVEL 3: Koordinator Bidang-Bidang */}
             <div>
               <div className="text-center mb-4">
                 <span className="inline-block text-[11px] font-bold text-slate-800 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full uppercase tracking-wider">

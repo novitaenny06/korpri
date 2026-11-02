@@ -12,9 +12,6 @@ import {
   MessageCircle,
   ExternalLink,
   Users,
-  Building2,
-  Award,
-  ShieldCheck,
   ChevronRight,
   Megaphone,
   FileText,
@@ -225,62 +222,6 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
         </div>
       </section>
-
-      {/* 3. STATS RIBBON */}
-      <section className="bg-slate-50/70 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
-            <div className="flex flex-col md:flex-row items-center gap-3.5 p-2">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#002d54] flex items-center justify-center shrink-0">
-                <Users className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-xl sm:text-2xl font-bold text-slate-900 tabular-nums">
-                  {settings.memberCount?.toLocaleString('id-ID') || '9.480'}+
-                </div>
-                <div className="text-xs text-slate-500 font-medium">Anggota ASN KORPRI</div>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row items-center gap-3.5 p-2">
-              <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0">
-                <Building2 className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-xl sm:text-2xl font-bold text-slate-900 tabular-nums">
-                  {settings.unitCount || '48'} Unit Kerja
-                </div>
-                <div className="text-xs text-slate-500 font-medium">OPD & 19 Kecamatan</div>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row items-center gap-3.5 p-2">
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
-                <Award className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-xl sm:text-2xl font-bold text-slate-900 tabular-nums">
-                  100%
-                </div>
-                <div className="text-xs text-slate-500 font-medium">Penyaluran Santunan</div>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row items-center gap-3.5 p-2">
-              <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center shrink-0">
-                <ShieldCheck className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-xl sm:text-2xl font-bold text-slate-900">
-                  BerAKHLAK
-                </div>
-                <div className="text-xs text-slate-500 font-medium">Nilai Dasar Etika ASN</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
 
       {/* 3. TENTANG KAMI SECTION */}
       <section className="py-16 lg:py-20 bg-white">
